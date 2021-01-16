@@ -20,5 +20,4 @@ wincertstore==0.2
 gunicorn
 nltk==3.5
 wordnet
-pros_cons
 reuters
