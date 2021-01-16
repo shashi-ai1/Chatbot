@@ -4,8 +4,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # load model
-import pickle
-pickle.load(open('infile','rb'))
+#import pickle
+#pickle.load(open('infile','rb'))
 
 @app.route("/")
 def home():
