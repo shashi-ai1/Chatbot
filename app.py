@@ -1,7 +1,11 @@
 
-import model
+#import model
 from flask import Flask, render_template, request
 app = Flask(__name__)
+
+# load model
+import dill
+dill.load_session('model.pkl')
 
 @app.route("/")
 def home():
@@ -11,7 +15,7 @@ def home():
 def get_bot_response():    
     userText = request.args.get('msg')
     #out=request.post(chat(userText))
-    return str(model.chat(userText))
+    return str(model(userText))
    
 
 
